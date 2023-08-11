@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>BOX MODEL</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            background-image: url(https://images.unsplash.com/photo-1690945192649-5027876956bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1192&q=80);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            
+        }
+        
+        input{
+            padding: 2px;
+            margin: 5px;
+            border: 2px solid red;
+        }
+        #btn{
+            border-radius: 3px;
+            border: 2px solid green;
+        }
+        #name{
+            width: 100px;
+            color: black;
+        }
+        #link{
+            display: inline-block;
+            border: 2px red ;
+            border-style: solid;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+        .first{
+            border: 2px rgb(30, 0, 255) solid;
+            margin: 5px;
+            padding: 3px;
+
+        }
+        .second{
+            border: 2px green solid;
+            margin: 5px;
+            padding: 3px;
+            background-origin: padding-box;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <p>Hello my name is Avinash</p>
+    <input id="name" type="text">
+    <input id="btn" type="button" name="Sublit" value="Submit">
+    <div class="first"> 
+        <div class="second">
+            <a id="link" href="http://www.youtube.com">Youtube</a>
+        </div>   
+    </div>
+
+    
+    <button>Submit</button>
+</body>
+</html>

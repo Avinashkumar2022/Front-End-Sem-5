@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediaQuery</title>
+    <style>
+        body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(103, 172, 103);
+        }
+
+        img
+        {
+        width: 1500px;
+        height:300px;
+        }
+
+        @media only screen and (max-width:850px)
+        {
+            body{
+                background-color:cyan;
+            }
+            img
+            {
+            width: 650px;
+            height: 425px;
+            }
+        }
+
+        @media only screen and (max-width:500px)
+        {
+        body{
+            background-color: rgb(225, 225, 104);
+        }
+        img
+        {
+        width: 1000px;
+        height: 500px;
+        }
+        }
+        
+        p{
+            font-weight: bold;
+            font-size: 30px;
+            font-style: oblique;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        </style>
+</head>
+<body>
+    <p>
+        I have been climbing the ladders of corporate world for the last few years and in all those years there is one thing for certain that I can say about this experience that it is not fun. I have grown old and resentful, I have acquired a great sum of money but now that I look back at the empire I have constructed, I feel nothing other than regret, regret of leaving the poeple I loved behind, regret of not going to movies with my friend when he asked me, regret of not spending more time with her when she wanted me to. 
+        When people look at me, all they see is a man who has acquired everything there is to acquire. All they can see is what they want to see, what they think a person of my stature will be like but for all the wealth I have, I don't have the slightest of happiness to show for it.
+    </p>
+    <img src="https://images.unsplash.com/photo-1525784451128-d1488f52f03e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1228&q=80" alt="A mountain range">
+</body>
+</html>

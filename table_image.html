@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tables</title>
+    <style>
+        body{
+            display: flex;
+            min-width: 100%;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* max-height: 100vh; */
+        }
+        *{
+            box-sizing: border-box;
+        }
+        table
+        {
+            border-collapse:collapse;
+            width: 100%;
+        }
+        td{
+            width: 300px;
+            border: 10px solid rgb(119, 119, 235);
+            text-align:center;
+            padding: 10px;
+        }
+        td:hover{
+            background: #000;
+            /* border-image: round; */
+        }
+        td img:hover{
+            border: greenyellow double 10px;
+        }
+        img{
+            max-width: 100%;
+            /* max-height: 100%; */
+            border-radius: 50%;
+            border: 10px rgb(52, 165, 165) double;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><img src="https://images.unsplash.com/photo-1613141354943-53f2b03cc0e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Bird"></td>
+            <td ><img src="https://plus.unsplash.com/premium_photo-1687880581630-07ed705e67a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1040&q=80" alt=""></td>
+        </tr>
+        <tr>
+            <td><img src="https://images.unsplash.com/photo-1606602842475-a5852a58b399?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmVhdXRpZnVsJTIwYmlyZHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60" alt=""></td>
+            <td><img src="https://images.unsplash.com/photo-1623665960509-af25703d8d24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmVhdXRpZnVsJTIwYmlyZHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60" alt=""></td>
+        </tr>
+
+    </table>
+</body>
+</html>
