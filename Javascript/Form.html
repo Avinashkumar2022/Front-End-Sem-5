@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        body{
+            background-image: url("stars.jpg");
+            background-position: center;
+        }
+        .Outer{
+            border: 4px #35508f solid;
+            border-radius: 12px;
+            display: inline-block;
+            width: 400px;
+            position: relative;
+            left: 557px;
+            top: 141px;
+            background-color: rgba(232, 245, 255, 0.711);
+            padding: 23px;
+        }
+        input[type=text],input[type=email],input[type=password],label{
+            border: none;
+            
+        }
+        h1{
+            text-align: center;
+        }
+        input{
+            margin: 10px;
+        }
+        #sub,#res{
+            border-radius: 10px;
+            background-color: #768fda;
+            width: 70px;
+            border: rgb(65, 47, 222) solid 2px;
+        }
+           
+
+        
+        </style>
+</head>
+<body>
+<div class="Outer">
+    <h1>Don't have an account? Want to join us</h1>
+    <form action="backend.js">
+        
+        <div class="name">
+            Name <input type="text" placeholder="Enter your name">
+        </div>
+        
+        <div class="email">
+            Email ID
+            <input type="email" placeholder="Email ID">
+        </div>
+        
+        <div class="city">
+            <label for="City">Select city</label>
+            <select name="Yourcity" id="City">
+                <option value="Patna">Patna</option>
+                <option value="lck">Lucknow</option>
+                <option value="rnch">Ranchi</option>
+                <option value="dlh">Delhi</option>
+            </select>
+        </div>
+
+        <div class="gender">
+            Gender  <input type="radio">Male
+             <input type="radio">Female
+             <input type="radio">Other
+        </div>
+
+        <div class="password">
+            Password<input type="password" placeholder="Password">
+        </div>
+
+        <div class="agree">
+            <input type="radio"> I agree to the terms and conditions
+        </div>
+
+        <div class="buttons">
+            <input id="sub" type="submit" value="Submit">
+            <input id="res" type="reset" value="Reset">
+        </div>
+    
+    </form>
+
+</div>
+</body>
+</html>

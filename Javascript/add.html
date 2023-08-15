@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript ADDITION</title>      
+</head>
+<body>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <input type="submit" value="ADD" id="submit" onclick="add()">
+    <input type="submit" value="SUBTRACT" id="submit" onclick="sub()">
+    <input type="submit" value="DIVIDE" id="submit" onclick="divide()">
+    <input type="submit" value="MULTIPLY" id="submit" onclick="mul()">
+
+    <h1 id="result" style="color: red;"></h1>
+
+    <script>
+        function add(){
+            var num1 =Number(document.getElementById("num1").value);
+            var num2=Number(document.getElementById("num2").value);
+            var sum=num1+num2;
+            document.getElementById("result").innerHTML="The sum of the given numbers is: "+sum;
+
+        }
+        function sub(){
+            var num1 =Number(document.getElementById("num1").value);
+            var num2=Number(document.getElementById("num2").value);
+            var dif=num1-num2;
+            document.getElementById("result").innerHTML="The difference of the given numbers is: "+dif;
+
+        }
+        function divide(){
+            var num1 =Number(document.getElementById("num1").value);
+            var num2=Number(document.getElementById("num2").value);
+            var div=num1/num2;
+            document.getElementById("result").innerHTML="The division of the given numbers is: "+div;
+        }
+        function mul(){
+            var num1 =Number(document.getElementById("num1").value);
+            var num2=Number(document.getElementById("num2").value);
+            var prod=num1*num2;
+            document.getElementById("result").innerHTML="The product of the given numbers is: "+prod;
+        }
+    </script>
+</body>
+</html>
