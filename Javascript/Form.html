@@ -13,50 +13,81 @@
             border: 4px #35508f solid;
             border-radius: 12px;
             display: inline-block;
-            width: 400px;
+            height: 492px;
+            width: 539px;
             position: relative;
-            left: 557px;
-            top: 141px;
+            left: 500px;
+            top: 90px;
             background-color: rgba(232, 245, 255, 0.711);
             padding: 23px;
         }
-        input[type=text],input[type=email],input[type=password],label{
+        input[type=text],input[type=email],input[type=password]{
             border: none;
-            
+            width: 530px;
+            border-radius: 5px;
+            height: 27px;
+            background-color: #0022d72b;
+        }
+        select{
+            border: none;
+            background-color: white;
+            border-radius: 5px;
+            width: 530px;
+            height: 27px;
+            background-color: #0022d72b;
         }
         h1{
             text-align: center;
         }
-        input{
-            margin: 10px;
-        }
         #sub,#res{
             border-radius: 10px;
-            background-color: #768fda;
-            width: 70px;
-            border: rgb(65, 47, 222) solid 2px;
+            background-color: #0020d74c;
+            width: 80px;
+            margin-left: 10px;
+            height: 25px;
+            font-weight: bold;
+            font-size: medium;
+            margin-top: 10px;
+            border: rgb(107, 98, 187) solid 2px;
         }
-           
+        #sub:hover,#res:hover{
+            background-color: #0020d786;
+        }
+        .mainElement{
+            display: block;
+            margin-top: 15px;
+        }
+        label{
+            font-weight: bold;
+            font-size: large;
+        }
+        .gender,.agree,.buttons{
+            margin-top: 15px;
+        }
+
 
         
         </style>
 </head>
 <body>
+
 <div class="Outer">
-    <h1>Don't have an account? Want to join us</h1>
-    <form action="backend.js">
+    <h1>Don't have an account? <br> Want to join us?</h1>
+
+    <form action="">
         
         <div class="name">
-            Name <input type="text" placeholder="Enter your name">
+            <label class="mainElement" for="name">Name</label>
+            <input id="name" type="text" placeholder="Enter your name">
         </div>
         
         <div class="email">
-            Email ID
-            <input type="email" placeholder="Email ID">
+            <label class="mainElement" for="email">Email ID</label>
+            <input id="email" type="email" placeholder="Email ID">
         </div>
         
         <div class="city">
-            <label for="City">Select city</label>
+            <label class="mainElement" for="City">Select city</label>
             <select name="Yourcity" id="City">
                 <option value="Patna">Patna</option>
                 <option value="lck">Lucknow</option>
@@ -66,17 +97,20 @@
         </div>
 
         <div class="gender">
-            Gender  <input type="radio">Male
-             <input type="radio">Female
-             <input type="radio">Other
+            <label for="gender">Gender</label>
+             <input id="male" type="radio" name="gender"><label for="male">Male</label>
+             <input id="female" type="radio" name="gender"><label for="female">Female</label>
+             <input id="other" type="radio" name="gender"><label for="other">Other</label>
         </div>
 
         <div class="password">
-            Password<input type="password" placeholder="Password">
+            <label class="mainElement" for="password">Password</label>
+            <input id="password" type="password" placeholder="Password">
         </div>
 
         <div class="agree">
-            <input type="radio"> I agree to the terms and conditions
+            <input id="agreement" type="radio"> 
+            <label for="agreement">I agree to the terms and conditions</label>
         </div>
 
         <div class="buttons">
