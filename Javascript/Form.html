@@ -25,11 +25,16 @@
         }
         input[type=text],input[type=email],input[type=password]{
             border: none;
+            outline: none;
             width: 448px;
             border-radius: 5px;
             height: 27px;
             background-color: #0022d72b;
+            /* background-color: white; */
         }
+        /* input[type=text],input[type=email],input[type=password]:focus{
+           outline: none;
+        } */
         select{
             border: none;
             background-color: white;
@@ -52,9 +57,11 @@
             margin-top: 10px;
             /* border: rgb(107, 98, 187) solid 2px; */
             border: none;
+            transition: all 0.3s;
         }
         #sub:hover,#res:hover{
             background-color: #0020d786;
+            transform: scale(1.2);
         }
         .mainElement{
             display: block;
