@@ -6,15 +6,17 @@
     <title>Forms</title>
     <style>
         body{
-            background-image: url("stars.jpg");
+            background-image: url(https://images.unsplash.com/photo-1570284613060-766c33850e00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
             background-position: center;
+            margin: auto;
+            background-size: cover;
         }
         .Outer{
             border: 4px #35508f solid;
             border-radius: 12px;
             display: inline-block;
-            height: 492px;
-            width: 539px;
+            height: 503px;
+            width: 455px;
             position: relative;
             left: 500px;
             top: 90px;
@@ -23,7 +25,7 @@
         }
         input[type=text],input[type=email],input[type=password]{
             border: none;
-            width: 530px;
+            width: 448px;
             border-radius: 5px;
             height: 27px;
             background-color: #0022d72b;
@@ -32,7 +34,7 @@
             border: none;
             background-color: white;
             border-radius: 5px;
-            width: 530px;
+            width: 448px;
             height: 27px;
             background-color: #0022d72b;
         }
@@ -40,15 +42,16 @@
             text-align: center;
         }
         #sub,#res{
-            border-radius: 10px;
+            border-radius: 25px;
             background-color: #0020d74c;
             width: 80px;
             margin-left: 10px;
-            height: 25px;
+            height: 32px;
             font-weight: bold;
             font-size: medium;
             margin-top: 10px;
-            border: rgb(107, 98, 187) solid 2px;
+            /* border: rgb(107, 98, 187) solid 2px; */
+            border: none;
         }
         #sub:hover,#res:hover{
             background-color: #0020d786;
@@ -106,10 +109,11 @@
         <div class="password">
             <label class="mainElement" for="password">Password</label>
             <input id="password" type="password" placeholder="Password">
+            <input type="checkbox" onclick="showPassword()"> Show Password
         </div>
 
         <div class="agree">
-            <input id="agreement" type="radio"> 
+            <input id="agreement" type="checkbox"> 
             <label for="agreement">I agree to the terms and conditions</label>
         </div>
 
@@ -121,5 +125,18 @@
     </form>
 
 </div>
+<script>
+    function showPassword() 
+    {
+        var x = document.getElementById("password");
+        if (x.type === "password") 
+        {
+          x.type = "text";
+        } else 
+        {
+          x.type = "password";
+        }
+    }
+</script>
 </body>
 </html>
