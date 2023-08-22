@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+            input{
+                transform:scale(2);
+                position: relative;
+                left: 550px;
+                top: 200px;
+                margin: 15px;
+            }
+        </style>
+    </head>
+    
+<body>
+    <input name="inputText1" type="text" id = "box1" onblur="funcx()" onkeyup="func1()"><br>
+    <input name="inputText2" type="text" id = "box2" onblur="funcy()" onkeyup="func2()">
+
+    <script>
+        function funcx()
+        {
+            var x = document.getElementById("box1");
+            x.style.backgroundColor = "Red";
+        }
+        function funcy()
+        {
+            var y = document.getElementById("box2");
+            y.style.backgroundColor = "Red";
+        }
+
+        function func1()
+        {
+            var x = document.getElementById("box1");
+            x.style.backgroundColor = "green";
+            if(x.value=="")
+                {
+                    x.style.backgroundColor="pink"
+                }
+        }
+
+        function func2()
+        {
+            var x = document.getElementById("box2");
+            x.style.backgroundColor = "green";
+            if(x.value=="")
+                {
+                    x.style.backgroundColor="pink"
+                }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Press listner</title>
+</head>
+<body>
+    <input id="box" name="inputText" type="text" onkeypress="func1()" onkeydown="func2()" onblur="func3()">
+
+    <script>
+        function func1()
+        {
+            alert("This is on key press");
+        }
+        
+        function func2()
+        {
+            alert("This is on key down");
+        }
+
+        function func3()
+        {
+
+            var x = document.getElementById("box");
+            x.style.backgroundColor = "pink";
+            if(document.inputText.value=="")
+            {
+                x.style.background="Red"
+            }
+        }
+        
+    </script>
+</body>
+</html>
