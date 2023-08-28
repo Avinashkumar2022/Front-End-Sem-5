@@ -8,20 +8,21 @@
                 top: 200px;
                 margin: 15px;
             }
+
         </style>
     </head>
     
 <body>
-    <input name="inputText1" type="text" id = "box1" onblur="funcx()" onkeyup="func1()"><br>
-    <input name="inputText2" type="text" id = "box2" onblur="funcy()" onkeyup="func2()">
+    <input name="inputText1" type="text" id = "box1" onblur="func_X()" onkeyup="func1()"><br>
+    <input name="inputText2" type="text" id = "box2" onblur="func_Y()" onkeyup="func2()">
 
     <script>
-        function funcx()
+        function func_X()
         {
             var x = document.getElementById("box1");
             x.style.backgroundColor = "Red";
         }
-        function funcy()
+        function func_Y()
         {
             var y = document.getElementById("box2");
             y.style.backgroundColor = "Red";
