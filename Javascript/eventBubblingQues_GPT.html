@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        div{
+            color: aquamarine;
+            border: 2px solid rgb(73, 73, 255);
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="Outer">
+    <div id="div" onclick="changeColour" class="Outer">
+        DIV
+    <input id="input" type="button"  value="BUTTON">
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const outerDiv = document.querySelector('.Outer');
+
+        outerDiv.addEventListener('click', function(event) {
+            if (event.target.tagName === 'INPUT') {
+                event.target.style.backgroundColor = 'lightblue';
+            } else {
+                event.target.style.backgroundColor = 'orange';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

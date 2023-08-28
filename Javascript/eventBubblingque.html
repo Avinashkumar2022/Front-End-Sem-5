@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .big {
+        height: 50vh;
+        width: 50vw;
+        border: 5px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 1.5s;
+        margin: 15vh;
+      }
+
+      .medium {
+        height: 70%;
+        width: 70%;
+        border: 5px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 1.5s;
+      }
+      .small {
+        height: 40%;
+        width: 40%;
+        border: 5px solid black;
+        transition: all 1.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="big" onmouseover="large()">
+      <div class="medium" onmouseover="med()">
+        <div class="small" onmouseover="small()"></div>
+      </div>
+    </div>
+
+    <script>
+      var a = document.querySelector(".big");
+      var b = document.querySelector(".medium");
+      var c = document.querySelector(".small");
+
+      function large() {
+        a.style.backgroundColor = "blue";
+        a.style.transform = "rotate(180deg)";
+      }
+      function med() {
+        b.style.backgroundColor = "lightblue";
+        b.style.transform = "rotate(180deg)";
+      }
+      function small() {
+        c.style.backgroundColor = "cyan";
+        c.style.transform = "rotate(180deg)";
+        event.stopPropagation();
+      }
+    </script>
+  </body>
+</html>
