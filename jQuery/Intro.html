@@ -1,0 +1,44 @@
+<!-- Syntax->  $(selector).action() -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>jQuery</title>
+</head>
+<body>
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+    <script src="jquery.min.js"></script>
+    <h1>@@@@@@@@@@</h1>
+    <h2>!!!!!!!!!!!!!</h2>
+    <h3>***************</h3>
+    <button id="b1">Set text of h1</button>
+    <button id="b2">Set text of h2</button>
+    <button id="b3">Set text of h3</button>
+
+    <script>
+        $("#b1").click(function()
+        {
+            $("h1").text("LOVELY PROFESSIONAL UNIVERSITY")
+        })
+        $("#b2").click(function()
+        {
+            $("h2").html("<a href='#'>click me</a>")
+        })
+        $("#b3").click(function()
+        {
+            $("h3").html("<img src='image1.jpg' height='100' width='100'>")
+        })
+        
+
+        // $(document).ready(function()
+        // {
+        //     $("h1").css({"color":"red","font-size":"100px"});
+        //     // $("h1").css("font-size","50px");
+        // })
+
+    </script>
+</body>
+</html>
