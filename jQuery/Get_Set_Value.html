@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <input type="text" name="" id="">
+    <button id="b1">Set Value</button>
+    <button id="b2">Clear Value</button>
+
+    <script>
+        $("#b1").click(function(){
+            $("input").val("Hello");
+        })
+        $("#b2").click(function(){
+            $("input").val("");
+            $("input").css({"background-color":"green"});
+        })
+    </script>
+
+</body>
+</html>

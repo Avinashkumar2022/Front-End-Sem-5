@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <input id="btn" type="button" value="I am a button">
+
+    <script>
+        $("body").click(function(){
+            $("body").css(
+                {
+                    "background":"yellow"
+                }
+            )
+        })
+        $("#btn").mouseover(function()
+            {
+                $("#btn").attr({"type":"text","value":"I am a textbox"}).css(
+                    {
+                        "color":"red",
+                        "background":"black"
+                    }
+                );
+                // $("#btn").attr("value","I am a textbox");
+
+            }
+            )
+        $("#btn").click(function()
+            {
+                $("#btn").attr("type","button");
+                $("#btn").attr("value","I am a button");
+            }
+            )
+    </script>
+</body>
+</html>

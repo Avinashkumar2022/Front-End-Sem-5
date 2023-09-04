@@ -11,11 +11,12 @@
 </head>
 <body>
     <h1>LOVELY PROFESSIONAL UNIVERSITY</h1>
-    <h2><a href='#'>click me</a></h2>
+    <h2><a href='https://www.google.com'>click me</a></h2>
     <h3><img src='image1.jpg' height='100' width='100'></h3>
     <button id="b1">Get text of h1</button>
     <button id="b2">Get text of h2</button>
     <button id="b3">Get text of h3</button>
+    <button id="b4">Get href hyperlink in h2</button>
 
     <script>
         $("#b1").click(function()
@@ -29,6 +30,10 @@
         $("#b3").click(function()
         {
             alert($("h3").html())
+        })
+        $("#b4").click(function()
+        {
+            alert($("img").attr("src"))
         })
         
 
