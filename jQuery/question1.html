@@ -12,34 +12,23 @@
     <input type="text" name="text1" id="txt1">
     <input type="text" name="text2" id="txt2">
     <script>
-            $("#txt1").keyup(function() {
+            $("#txt1,#txt2").keyup(function() {
                 if ($(this).val().length > 0) 
                 {
-                    $("#txt1").css("background-color", "green"); 
+                    $(this).css("background-color", "green"); 
                 } 
                 else 
                 {
-                    $("#txt1").css("background-color", "red"); 
+                    $(this).css("background-color", "red"); 
                 }
             });
 
-            $("#txt2").keyup(function() {
-                if ($(this).val().length > 0) 
-                {
-                    $("#txt2").css("background-color", "green"); 
-                } 
-                else 
-                {
-                    $("#txt2").css("background-color", "red"); 
-                }
-            });
+           
 
-            $("#txt1").blur(function(){
-                $("#txt1").css("background-color", "red"); 
+            $("#txt1,#txt2").blur(function(){
+                $(this).css("background-color", "red"); 
             })
-            $("#txt2").blur(function(){
-                $("#txt2").css("background-color", "red"); 
-            })
+            
     </script>
 </body>
 </html>
