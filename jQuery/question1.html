@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        *{
+            outline: none;
+        }
+        
+    </style>
 </head>
 <body>
     <input type="text" name="text1" id="txt1">
@@ -15,18 +21,18 @@
             $("#txt1,#txt2").keyup(function() {
                 if ($(this).val().length > 0) 
                 {
-                    $(this).css("background-color", "green"); 
+                    $(this).css({"background-color":"green","border":"3px solid grey"}); 
                 } 
                 else 
                 {
-                    $(this).css("background-color", "red"); 
+                    $(this).css({"background-color":"red","border":"3px solid grey"}); 
                 }
             });
 
            
 
             $("#txt1,#txt2").blur(function(){
-                $(this).css("background-color", "red"); 
+                $(this).css({"background-color":"yellow","border":"3px solid grey"}); 
             })
             
     </script>
