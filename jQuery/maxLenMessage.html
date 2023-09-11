@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <input id="txt" type="text" maxlength="10">
+    <div id="charCount">Characters remaining: 10</div>
+
+    <script>
+        $("#txt").keyup(function(){
+            var len = $(this).val().length;
+            var remaining = 10 - len;
+            $("#charCount").text("Characters remaining: " + remaining);
+        });
+    </script>
+</body>
+</html>

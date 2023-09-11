@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prepend adn Append</title>
+</head>
+<body>
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+    <input id="btn1" type="button" value="Prepend">
+    <input id="btn2" type="button" value="Append">
+    <input id="btn3" type="button" value="After">
+    <input id="btn4" type="button" value="Before">
+
+    <script>
+            {$("#btn1").click(function()
+            {
+                $("ul").prepend("<li>Prepended Element</li>");
+            })
+            $("#btn2").click(function()
+            {
+                $("ul").append("<li>Appended Element</li>");
+            })
+            $("#btn3").click(function()
+            {
+                $("ul").after("<li>After Element</li>");
+            })
+            $("#btn4").click(function()
+            {
+                $("ul").before("<li>Before Element</li>");
+            })}
+    </script>
+</body>
+</html>

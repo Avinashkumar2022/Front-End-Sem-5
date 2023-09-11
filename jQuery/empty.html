@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empty and Remove</title>
+
+    <style>
+        .maindiv{
+            border: 2px red solid;
+            width: 500px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-size: medium;
+            font-style: inherit;    
+            text-align: center;
+            position: absolute;
+
+
+        }
+        .maindiv2{
+            border: 2px red solid;
+            margin: 10px;
+            width: 500px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-size: medium;
+            font-style: inherit;    
+            text-align: center;
+            position: absolute;
+            left: 600px;
+        }
+        button{
+            position: relative;
+            top: 220px;
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div class="maindiv">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, maiores, totam quidem quis repudiandae sit dicta maxime nemo ullam, sequi ipsum dolorem nesciunt reiciendis iusto reprehenderit consectetur veritatis sed laboriosam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dicta tempore architecto cum ratione sunt recusandae debitis repellendus numquam a.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, sed!</p>
+    </div>
+
+    <div class="maindiv2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, maiores, totam quidem quis repudiandae sit dicta maxime nemo ullam, sequi ipsum dolorem nesciunt reiciendis iusto reprehenderit consectetur veritatis sed laboriosam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dicta tempore architecto cum ratione sunt recusandae debitis repellendus numquam a.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, sed!</p>
+    </div>
+    <button id="btn1">Remove</button>
+    <button id="btn2">Empty</button>
+
+    <script>
+        $("#btn1").click(function(){
+            $(".maindiv").remove();
+        });
+        $("#btn2").click(function(){
+            $(".maindiv2").empty();
+        });
+    </script>
+</body>
+</html>

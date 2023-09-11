@@ -1,0 +1,45 @@
+<!--  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <input type="text" name="text1" id="txt1">
+    <input type="text" name="text2" id="txt2">
+    <script>
+            $("#txt1").keyup(function() {
+                if ($(this).val().length > 0) 
+                {
+                    $("#txt1").css("background-color", "green"); 
+                } 
+                else 
+                {
+                    $("#txt1").css("background-color", "red"); 
+                }
+            });
+
+            $("#txt2").keyup(function() {
+                if ($(this).val().length > 0) 
+                {
+                    $("#txt2").css("background-color", "green"); 
+                } 
+                else 
+                {
+                    $("#txt2").css("background-color", "red"); 
+                }
+            });
+
+            $("#txt1").blur(function(){
+                $("#txt1").css("background-color", "red"); 
+            })
+            $("#txt2").blur(function(){
+                $("#txt2").css("background-color", "red"); 
+            })
+    </script>
+</body>
+</html>
