@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json</title>
+</head>
+<body>
+    <script>
+        let student={
+            "name":"Avinash",
+            "address":"Delhi",
+            "cgpa":7.3
+        }
+
+        console.log(student);
+        var student1=JSON.parse(student);
+        console.log(student1)
+
+        // document.write("Name: "+student.name+"<br>")
+        // document.write("Address: "+student.address+"<br>")
+        // document.write("CGPA: "+student.cgpa+"<br>")
+        // document.write("CGPA: "+student["cgpa"]+"<br>")
+
+        // for(let key in student)
+        // {
+        //     document.write(key+": "+student[key]+"<br>")
+        // }
+
+        // for (let value of Object.values(student)) {
+        //     console.log(value);
+        // }
+        // for (let [key, value] of Object.entries(student)) {
+        //     console.log(`Key: ${key}, Value: ${value}`);
+        // }
+
+        // let student1=JSON.stringify(student)
+        // document.write(student1)
+        // console.log(student1);
+    </script>
+</body>
+</html>

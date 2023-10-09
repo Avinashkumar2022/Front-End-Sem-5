@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.7.1.min.js"></script>
+    <title>List Remove</title>
+    <style>
+        ul{
+            border: 2px solid red;
+        }
+        li{
+            border: 2px solid rgb(72, 0, 255);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+    <button id="btn">Remove</button>
+    <button id="btn2">Empty</button>
+    <script>
+        $("#btn").click(function(){
+            $("ul li").remove();
+        })
+        $("#btn2").click(function(){
+            $("ul li").empty();
+        })
+    </script>
+</body>
+</html>

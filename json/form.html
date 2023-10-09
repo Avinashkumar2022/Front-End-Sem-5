@@ -1,0 +1,181 @@
+<!-- Make a reservation form and  The value should be visible in the form of json after clicking on the submit button -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation form</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        body{
+            background-image: url();
+            background-position: center;
+            margin: auto;
+            background-size: contain;
+        }
+        .Outer{
+            border: 4px #35508f solid;
+            border-radius: 12px;
+            display: inline-block;
+            height: 600px;
+            width: 455px;
+            position: relative;
+            left: 500px;
+            top: 20px;
+            background-color: rgba(232, 245, 255, 0.711);
+            padding: 30px;
+        }
+        input[type=text],input[type=email],input[type=password]{
+            border: none;
+            outline: none;
+            width: 448px;
+            border-radius: 5px;
+            height: 27px;
+            background-color: #0022d72b;
+            /* background-color: white; */
+        }
+        /* input[type=text],input[type=email],input[type=password]:focus{
+           outline: none;
+        } */
+        select{
+            border: none;
+            background-color: white;
+            border-radius: 5px;
+            width: 448px;
+            height: 27px;
+            background-color: #0022d72b;
+        }
+        h1{
+            text-align: center;
+        }
+        #sub,#res{
+            border-radius: 25px;
+            background-color: #0020d74c;
+            width: 80px;
+            margin-left: 10px;
+            height: 32px;
+            font-weight: bold;
+            font-size: medium;
+            margin-top: 10px;
+            /* border: rgb(107, 98, 187) solid 2px; */
+            border: none;
+            transition: all 0.3s;
+        }
+        #sub:hover,#res:hover{
+            background-color: #0020d786;
+            transform: scale(1.2);
+        }
+        .mainElement{
+            display: block;
+            margin-top: 15px;
+        }
+        label{
+            font-weight: bold;
+            font-size: large;
+        }
+        .gender,.agree,.buttons{
+            margin-top: 15px;
+        }
+        .error{
+            color: red;
+            font-size: 12px;
+        }
+
+
+        
+        </style>
+</head>
+<body>
+
+<div class="Outer">
+    <h1>Don't have an account? <br> Want to join us?</h1>
+
+    <form action="" id="myForm" name="myForm" onsubmit="return(validation());">
+        
+        <div class="name">
+            <label class="mainElement" for="nameid">Name</label>
+            <input id="nameid" name="name" type="text" placeholder="Enter your name">
+            <span class="error" id="errorname"></span>
+        </div>
+        
+        <div class="email">
+            <label class="mainElement" for="email">Email ID</label>
+            <input id="email" name="Email" type="email" placeholder="Email ID">
+            <span class="error" id="erroremail"></span>
+        </div>
+        
+        <div class="city">
+            <label class="mainElement" for="City">Select city</label>
+            <select name="cityname" id="City">
+                <option value="select" selected>Select</option>
+                <option value="Patna">Patna</option>
+                <option value="lck">Lucknow</option>
+                <option value="rnch">Ranchi</option>
+                <option value="dlh">Delhi</option>
+            </select>
+            <span class="error" id="errorcity"></span>
+        </div>
+
+        <div class="gender">
+            <label for="gender">Gender</label>
+             <input id="male" type="radio" name="gender"><label for="male">Male</label>
+             <input id="female" type="radio" name="gender"><label for="female">Female</label>
+             <input id="other" type="radio" name="gender"><label for="other">Other</label>
+             <br>
+             <span class="error" id="errorgender"></span>
+        </div>
+
+        <div class="password">
+            <label class="mainElement" for="password">Password</label>
+            <input id="password" name="pass" type="password" placeholder="Password">
+            <span class="error" id="errorpassword"></span><br>
+            <input type="checkbox" onclick="showPassword()"> Show Password
+        </div>
+
+        <div class="agree">
+            <input id="agreement" name="agree" type="checkbox"> 
+            <label for="agreement">I agree to the terms and conditions</label><br>
+            <span class="error" id="erroragreement"></span>
+        </div>
+    
+
+        <div class="buttons">
+            <input id="sub" type="submit" value="Submit">
+            <input id="res" type="reset" value="Reset">
+        </div>
+    
+    </form>
+
+</div>
+<script>
+    function validation()
+    {
+        document.write("Name: "+nameid.value+"<br>")
+        document.write("Name: "+email.value+"<br>")
+
+        // document.getElementById('myForm').addEventListener('submit', function(event) {
+        //     event.preventDefault();
+
+        //     let formData = new FormData(this);
+
+        //     let reservationData = {};
+        //     formData.forEach((value, key) => {
+        //         reservationData[key] = value;
+        //     });
+
+        //     document.getElementById('jsonOutput').textContent = JSON.stringify(reservationData, null, 2);
+        // });
+    }
+</script>
+</body>
+</html>
+</body>
+</html>
