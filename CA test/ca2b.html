@@ -1,0 +1,93 @@
+<!-- CA 2 SET-D  Interactive Countdown Timer-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA2 INTERACTIVE COUNTDOWN TIMER</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background: #000;
+        }
+        #number{
+            width:150px;
+            text-align: center;
+            height: 30px;
+            margin: 10px;
+            border-radius: 20px;
+            border: 2px grey solid;
+            background: yellow;
+        }
+        #start,#stop{
+            border-radius: 20px;
+            /* margin: 5px; */
+            text-align: center;
+            height: 30px;
+            width: 70px;
+            border: 2px grey solid;
+            background: beige;
+            
+
+        }
+        #display {
+            font-size: 24px;
+            font-weight: bold;
+            color: green;
+            margin: 20px;
+        }
+        #date{
+            color: antiquewhite;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="number" value="5">
+    <input type="button" id="start" value="Start">
+    <input type="button" id="stop" value="Stop">
+    <div id="display"></div>
+    <div id="date"></div>
+
+    <script>
+        var interval;
+        var number = 5;
+
+            $('#display').hide();
+
+            $('#start').click(function() {
+                $('#display').show();
+                $('#date').show();
+                number = $('#number').val();
+
+                interval = setInterval(function() {
+                    number--;
+                    $('#number').val(number);
+
+                    var date = new Date();
+                    date.getDate;
+                    $('#date').text(date);
+                    if (number <= 0) {
+                        clearInterval(interval);
+                        $('#display').text('OVER').css('color', 'green');
+                        $('#number').css('background-color', 'green');
+                        $('#date').hide();
+                    }
+                }, 1000);
+            });
+
+            $('#stop').click(function() {
+                clearInterval(interval);
+                $('#display').text('STOP').css('color', 'red');
+                $('#number').css('background-color', 'red');
+            });
+    </script>
+
+</body>
+</html>
