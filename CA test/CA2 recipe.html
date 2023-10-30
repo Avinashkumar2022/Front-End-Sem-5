@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Search</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .search-container {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #recipe-results, #recipe-details {
+            display: none;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            display: inline-block;
+            margin: 5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="search-container">
+        <input type="text" id="ingredient" placeholder="Enter ingredient...">
+        <button id="search">Search</button>
+    </div>
+
+    <div id="recipe-results">
+        <h2>Recipe Results</h2>
+        <ul id="recipe-list"></ul>
+    </div>
+
+    <div id="recipe-details">
+        <h2>Recipe Details</h2>
+        <div id="details"></div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#search').click(function() {
+                const ingredient = $('#ingredient').val();
+                if (ingredient) {
+                    const recipeData = [
+                        { name: 'Spaghetti Carbonara', details: 'A classic Roman pasta dish.', link: 'link-to-recipe-1' },
+                        { name: 'Chicken Alfredo', details: 'Creamy pasta with grilled chicken.', link: 'link-to-recipe-2' },
+                        { name: 'Vegetable Stir-fry', details: 'Healthy stir-fried vegetables with tofu.', link: 'link-to-recipe-3' }
+                    ];
+
+                    $('#recipe-list').empty();
+
+                    recipeData.forEach(function(recipe) {
+                        $('#recipe-list').append(`<li><a href="#" class="recipe-link" data-link="${recipe.link}">${recipe.name}</a></li>`);
+                    });
+
+                    $('#recipe-results').show();
+                }
+            });
+
+            $(document).on('click', '.recipe-link', function(e) {
+                e.preventDefault();
+                const link = $(this).data('link');
+                const recipeDetails = [
+                    { link: 'link-to-recipe-1', ingredients: 'Pasta, Eggs, Bacon, Parmesan Cheese, water' },
+                    { link: 'link-to-recipe-2', ingredients: 'Chicken, Alfredo Sauce, Fettuccine Pasta' },
+                    { link: 'link-to-recipe-3', ingredients: 'Mixed Vegetables, Tofu, Soy Sauce' }
+                ];
+
+                const details = recipeDetails.find(recipe => recipe.link === link);
+                if (details) {
+                    $('#details').text(`Ingredients: ${details.ingredients}`);
+                    $('#recipe-details').show();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

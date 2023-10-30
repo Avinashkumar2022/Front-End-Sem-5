@@ -1,6 +1,38 @@
-<img src="http://www.celularescostarica.cr/shop/product/inn4440-celular-samsung-galaxy-s21-plus-6-7-128-gb-12686" alt="" height="300" width="300">
 <h1>Welcome</h1>
 <h3>Product name: {{products.name}}</h3>
 <h3>Price:{{products.price}}</h3>
-<!-- <h3>Total Price: {{products.price+products.gst}}</h3> -->
+<h3>Total Price: {{products.price+products.gst}}</h3>
 <h3>Total Price: {{calculatePrice()}}</h3>
+<!-- <img src="http://www.celularescostarica.cr/shop/product/inn4440-celular-samsung-galaxy-s21-plus-6-7-128-gb-12686" alt="" height="300" width="300"> -->
+<img src="{{products.image2}}" alt="">
+<img [src]="products.image" height="200" width="300">
+<!-- <h3>In stock: {{products.inStock>0?products.inStock + " items left":"Out of stock"}}</h3> -->
+
+
+<h1 *ngIf="products.inStock>0; else elseblock">
+    {{products.inStock + " items left"}}
+</h1>
+<ng-template #elseblock>
+    Out Of Stock
+</ng-template>
+
+
+<h3>Quantity: </h3>
+<button (click)="decreaseQuantity()" > - </button>
+{{products.quantity}}
+<button (click)="increaseQuantity()" > + </button>
+<br><br>
+<button [disabled]="!(products.inStock>0)">BUY NOW</button>
+
+<input (mouseover)="changeProductName()" (mouseout)="changeProductName2" value="{{products.name}}" type="text">
+
+<!-- <button [ngStyle]="{'background-color':'red','color':'gold'}">Deliver to this address</button> -->
+<button [ngStyle]="{'background-color':products.inStock>0?'green':'red','color':'gold'}">Deliver to this address</button>
+
+<button [ngStyle]="applyStyles()">Deliver to this Address</button>
+
+<h4 *ngFor ="let x of reviewList">
+    {{x.name}}-->{{x.review}}
+</h4>
+
+<!-- <li *ngFor="let item of items; index as i; trackBy: trackByFn">...</li> -->
