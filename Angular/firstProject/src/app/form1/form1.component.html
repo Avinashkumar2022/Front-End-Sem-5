@@ -1,0 +1,43 @@
+<h1>Reactive Forms </h1>
+
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+    <p>
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" id="firstName" form ControlName="firstname">
+    </p>
+    
+    <p>
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" id="lastName" form ControlName="lastname">
+    </p>
+
+    <p>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" formControlName="email">
+    </p>
+
+    <p>
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender" id="gender" value="male" formControlName="gender"> Male
+        <input type="radio" name="gender" id="gender" value="female" formControlName="gender"> Female
+    </p>
+
+    <p>
+        <label for="isMarried">Married</label>
+        <input type="checkbox" name="isMarried" id="isMarried" formControlName="isMarried">
+    </p>
+
+    <p>
+        <label for="country">Select country</label>
+        <select name="country" id="country" formControlName="country">
+            <option [ngValue]="c.name" *ngFor="let c of countryList">
+                {{c.name}}
+            </option>
+        </select>
+    </p>
+
+    <p>
+        <button type="submit">Submit</button>
+    </p>
+</form>
